@@ -1,5 +1,5 @@
 # Truffle Samples
-Learn about Truffle.
+Learn about Truffle development, deploy, test.
 
 
 ### Prerequisites  
