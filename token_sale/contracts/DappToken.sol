@@ -3,13 +3,15 @@ pragma solidity >=0.4.22 <0.9.0;
 
 contract DappToken {
 
-  uint256 public _totalSupply;
+  string public name = 'DApp Token';
+  string public symbol = 'DAPP';
+  string public standard = 'DApp Token v1.0';
+  uint256 public totalSupply;
 
-  constructor() {
-    _totalSupply = 10000000;
-  }
+  mapping(address => uint256) public balanceOf;
 
-  function totalSupply() public view returns(uint256) {
-    return _totalSupply;
+  constructor(uint256 _initialSupply) {
+    balanceOf[msg.sender] = _initialSupply;
+    totalSupply = _initialSupply;
   }
 }
